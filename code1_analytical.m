@@ -18,7 +18,7 @@ theta = 0:360;
 % I consider a sinusoidal variatoin for the reluctance
 % there are two airgap, here I just calculated the torque for airgap1 and
 % at the end we multiply the torque by 2 to 
-R_airgap = ((Rmax+Rmin)/2+(Rmax-Rmin)*cosd(2*theta)/2);
+R_airgap = (Rmax+Rmin)/2+(Rmax-Rmin)*cosd(2*theta)/2;
 
 L = Nseries^2./R_airgap;
 % drivative of the inductance L has been taken by hand and below is the
