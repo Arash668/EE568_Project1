@@ -4,12 +4,12 @@ Airgap_max = 2.5e-3;
 u0 = pi*4e-7;
 I_dc = 3 ; 
 Nseries = 250; % number of turns
-Stator_Pole_arc = 74*pi/180;
+Stator_Pole_arc = 74*pi/180; % 74 degree is the arc of the staor pole facing rotor
 % Stator_Pole_arc = 67.5*pi/180;
 % there are two airgaps Upper one I call Airgap1 and lower one Airgap2
 
 % when rotor position is 90 deg minimum reluctance is achieved 
-% 74 degree is the arc of the rotor pole
+
 Rmin =  Airgap_min/(u0*12e-3*Stator_Pole_arc*Lstack);
 % when rotor position is 0 deg maximum reluctance is achieved
 Rmax = Airgap_max/(u0*10e-3*Stator_Pole_arc*Lstack); 
