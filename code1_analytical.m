@@ -23,7 +23,7 @@ R_airgap = ((Rmax+Rmin)/2+(Rmax-Rmin)*cosd(2*theta)/2);
 L = Nseries^2./R_airgap;
 % drivative of the inductance L has been taken by hand and below is the
 % resutltant dl/dtheta
-DL_Dtheta = (Nseries^2)*((Rmax-Rmin)*(-2*sind(2*theta))/2)./(R_airgap.^2);
+DL_Dtheta = -1*(Nseries^2)*((Rmax-Rmin)/2*(-2*sind(2*theta)))./(R_airgap.^2);
 
 Torque = 2*(I_dc^2*DL_Dtheta)/2;
 
