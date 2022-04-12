@@ -20,7 +20,7 @@ theta = 0:360;
 
 Lmax = Nseries^2/Rmin;
 Lmin = Nseries^2/Rmax;
-LL = (Lmax+Lmin)/2+(Lmax-Lmeeein)*cosd(2*theta)/2;
+LL = (Lmax+Lmin)/2+(Lmax-Lmin)*cosd(2*theta)/2;
 
 DL_Dtheta = -2*(Lmax-Lmin)*sind(2*theta)/2;
 
