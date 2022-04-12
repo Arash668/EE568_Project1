@@ -21,7 +21,7 @@ theta = 0:360;
 Lmax = Nseries^2/Rmin;
 Lmin = Nseries^2/Rmax;
 LL = (Lmax+Lmin)/2+(Lmax-Lmin)*cosd(2*theta)/2;
-
+R_airgap = Nseries^2./LL;
 DL_Dtheta = -2*(Lmax-Lmin)*sind(2*theta)/2;
 
 Torque = (I_dc^2*DL_Dtheta)/2;
@@ -31,7 +31,7 @@ plot(theta,R_airgap)
 xlabel('Rotor Rotation deg ');
 ylabel(' Reluctance');
 figure
-plot(theta,L*1000)
+plot(theta,LL*1000)
 xlabel('Rotor Rotation deg ');
 ylabel(' Inductance mH');
 figure
