@@ -36,6 +36,8 @@ for n=1:180
 end
 
 Torque = (Idc.^2.*DL_Dtheta)/2;
+T_avg_total = 2*mean(Torque); % multiplied by to consider the two poles of the machine
+
 
 figure
 plot(theta,R_airgap)
@@ -51,4 +53,9 @@ hold on
 % plot(theta,Idc)
 xlabel('Rotor Rotation deg ');
 ylabel(' Torque Nm');
+
+figure
+plot(theta,Idc)
+xlabel('Rotor Rotation deg ');
+ylabel(' Pulse current (A)');
 
