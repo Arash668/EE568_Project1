@@ -18,8 +18,8 @@ Rmax = Airgap_max/(u0*Area);
 
 theta = 0:360;
 
-Lmax = Nseries^2/Rmin;
-Lmin = Nseries^2/Rmax;
+Lmax = Nseries^2/Rmax;
+Lmin = Nseries^2/Rmin;
 LL = (Lmax+Lmin)/2+(Lmax-Lmin)*cosd(2*theta)/2;
 R_airgap = Nseries^2./LL;
 DL_Dtheta = -2*(Lmax-Lmin)*sind(2*theta)/2;
