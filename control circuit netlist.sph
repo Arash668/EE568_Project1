@@ -1,0 +1,23 @@
+* 28;Project1_2_ckt2.ckt
+* Project: C:/Maxwell-Simulation/Ozan 568/Project1/Project1_3_linear_material.aedt
+* Design: Project1_2_ckt2
+
+*BeginParamDef
+*EndParamDef
+
+
+*begin toplevel circuit
+.PARAM PulseWidth=85
+.PARAM PulseInitial_delay=2
+IVoltmeter26 net_1 0 DC 0 
+.PRINT TRAN PROBE IVoltmeter26(t) V(IVoltmeter26)
+R24 net_1 net_3 2.3
+LWinding1 net_1 0 1 Winding
+I22 0 net_2 PULSE (0 3 'PulseInitial_delay' 1 1 'PulseWidth' 180) TYPE=POS
+IVoltmeter25 net_2 0 DC 0 
+.PRINT TRAN PROBE IVoltmeter25(t) V(IVoltmeter25)
+VWindingCurrent net_2 net_3 DC 0 
+.PRINT TRAN PROBE VWindingCurrent(t) I(VWindingCurrent)
+
+*end toplevel circuit
+.end
